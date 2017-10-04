@@ -26,6 +26,24 @@ char * mystrcpy(char *dest, char *source){
   return returnval; 
 }
 
+/*
+strncat: concatenates the first n chars of source array to end of dest array
+returns pointer to destination array
+*/
+char *
+mystrncat(char *dest, char *source, int n)
+{
+  char * retVal = dest;
+  int i = 0;
+  while (*dest)
+    dest++;
+  for (i = 0; i < n && source[i] != 0; i++)
+    dest[i] = source[i];
+  for ( ; i < n; i++)
+    dest[i] = 0;
+  return retVal;
+}
+
 /*strcmp fxn: compares two strings. Returns 0 if they are equal, returns
  difference of ASCII characters of first mismatched char if unequal*/
 
