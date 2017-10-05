@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -39,8 +38,7 @@ mystrncat(char *dest, char *source, int n)
     dest++;
   for (i = 0; i < n && source[i] != 0; i++)
     dest[i] = source[i];
-  for ( ; i < n; i++)
-    dest[i] = 0;
+  dest[i] = 0;
   return retVal;
 }
 
