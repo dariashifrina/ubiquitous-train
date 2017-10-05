@@ -83,5 +83,10 @@ int main(){
   printf("testing mystrcmp(s1,s2):\n[standard]:%d\n[mine]:%d\n", strcmp(s1,s2), mystrcmp(s1,s2));
   printf("testing mystrchr(s3,'t'):\n[standard]:%s\n[mine]:%s\n", strchr(s3,'t'), mystrchr(s3,'t'));
   printf("testing mystrcpy(s4,s1):\n[standard]:%s\n[mine]:%s\ns4:%s\ns5:%s\n", strcpy(s4,s1),mystrcpy(s5,s1),s4, s5);
+  
+  printf("testing mystrncat(s1, s2, 4):\n");
+  mystrncat(s1, s2, 4);
+  printf("new s1: %s ...should be \"hellogood\"\n", s1);
+  
   return 0;
 }
